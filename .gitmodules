@@ -1,0 +1,4 @@
+[submodule "fav"]
+	path = fav
+	url = https://github.com/FormulasAndVehicles/fav.git
+

@@ -1,0 +1,3 @@
+<launch>
+    <node name="live_plot_node" pkg="navigation" type="LiveTrackingPlot.py" output="screen" />
+</launch>

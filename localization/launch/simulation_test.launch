@@ -1,0 +1,6 @@
+<launch>
+    <include file="$(find fav_sim)/launch/gazebo_assignment2.launch" pass_all_args="true" />
+    <include file="$(find fav_sim)/launch/spawn_vehicle.launch" pass_all_args="true" />
+    <include file="$(find fav_sim)/launch/keyboard_control.launch" pass_all_args="true" />
+    <node name="rqt_multiplot" pkg="rqt_multiplot" type="rqt_multiplot" args="--multiplot-config $find(localization)/rqt_multiplot.xml"/>
+</launch>

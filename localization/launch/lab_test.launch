@@ -1,0 +1,12 @@
+<launch>
+    <arg name="vehicle_name" default="bluerov" />
+    <group ns="$(arg vehicle_name)">
+        <node name="depth_calculator" pkg="controllers" type="depth_calculator.py" output="screen" />
+        <node name="controller" pkg="controllers" type="controller.py" output="screen" />
+        <node name="localization_node" pkg="localization" type="localizer.py" output="screen" />
+        <node name="config_publisher" pkg="controllers" type="reconf_publisher.py" output="screen" />
+    </group>
+    <node name="rqt_multiplot" pkg="rqt_multiplot" type="rqt_multiplot" args="--multiplot-config $find(localization)/rqt_multiplot.xml" />
+    <!-- <node name="path_generator_node" pkg="localization" type="path_generator.py" output="screen" /> -->
+    <node name="rqt_reconfigure" pkg="rqt_reconfigure" type="rqt_reconfigure" />
+</launch>

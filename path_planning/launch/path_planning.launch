@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<launch>
+  <rosparam file="$(find station_publisher)/cfg/stations.yaml" />
+  <node name="path_planning_node" pkg="path_planning" type="main.py" output="screen"/>
+</launch>

@@ -1,0 +1,48 @@
+<launch>
+    <arg name="gui" default="true" />
+    <arg name="vehicle_name" default="bluerov" />
+    <include file="$(find gazebo_ros)/launch/empty_world.launch">
+        <arg name="world_name" value="$(find fav_sim)/worlds/tank_with_tags.world" />
+        <arg name="verbose" value="true" />
+        <arg name="gui" value="$(arg gui)" />
+        <arg name="output" value="log" />
+    </include>
+
+    <node name="station_A1" pkg="gazebo_ros" type="spawn_model"
+    args="-sdf -file $(find fav_sim)/models/sdf_models/tag36_11_00127/model.sdf
+          -model tag_127
+          -x 2.0 -y 0.5 -z -0.5
+         -R -1.57 -P 1.57 -Y 1.57" />
+    
+    <node name="station_A2" pkg="gazebo_ros" type="spawn_model"
+    args="-sdf -file $(find fav_sim)/models/sdf_models/tag36_11_00126/model.sdf
+          -model tag_126
+          -x 2.0 -y 0.35 -z -0.65
+         -R -1.57 -P 1.57 -Y 1.57" />
+
+    <node name="station_B1" pkg="gazebo_ros" type="spawn_model"
+    args="-sdf -file $(find fav_sim)/models/sdf_models/tag36_11_00125/model.sdf
+          -model tag_125
+          -x 0.0 -y 1.2 -z -0.5
+         -R 1.57 -P 1.57 -Y 1.57" />
+
+    <node name="station_B2" pkg="gazebo_ros" type="spawn_model"
+    args="-sdf -file $(find fav_sim)/models/sdf_models/tag36_11_00124/model.sdf
+          -model tag_124
+          -x 0.0 -y 1.35 -z -0.65
+         -R 1.57 -P 1.57 -Y 1.57" />
+
+    <node name="station_C1" pkg="gazebo_ros" type="spawn_model"
+    args="-sdf -file $(find fav_sim)/models/sdf_models/tag36_11_00123/model.sdf
+          -model tag_123
+          -x 1.0 -y 4.0 -z -0.5
+         -R 0.0 -P -1.57 -Y 1.57" />
+     
+    <node name="station_C2" pkg="gazebo_ros" type="spawn_model"
+    args="-sdf -file $(find fav_sim)/models/sdf_models/tag36_11_00122/model.sdf
+        -model tag_122
+        -x 1.15 -y 4.0 -z -0.65
+        -R 0.0 -P -1.57 -Y 1.57" />
+    
+
+</launch>

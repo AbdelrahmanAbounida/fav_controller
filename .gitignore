@@ -1,0 +1,6 @@
+**/__pycache__
+*.pyc
+*.swp
+*.tmp
+web_ui/src/ui/node_modules/*
+**/CATKIN_IGNORE

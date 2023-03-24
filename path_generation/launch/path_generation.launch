@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<launch>
+  <rosparam file="$(find station_publisher)/cfg/stations.yaml" />
+  <node name="path_generator_node" pkg="path_generation" type="PathGenerator.py" output="screen"/>
+</launch>
