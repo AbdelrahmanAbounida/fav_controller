@@ -19,7 +19,6 @@ This Project consists of mainly 8 package:
 - **5- path_planning**: this package calculates the shortest path from the first station to the last one according to the given order from optimization package.
 - **6- path_generation**: this package takes the calculated path from path_planning pkg and generates it point by point to the controller (navigation_package).
 - **7- navigation**: this package represnts the robot controller and is responsible for following the generated path by path_generation pkg.
-- **8- web_ui**: a simple dashboard that add some features to dynamically control the robot beside some other actions and visualizations:
 
 ## Package order
 ![](pictures/pkg_order.png)
