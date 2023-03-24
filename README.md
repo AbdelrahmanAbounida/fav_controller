@@ -1,4 +1,4 @@
-# Seagrass Supply Delivery
+# Seagrass Supply Delivery (BlueROV- Underwater Robot)
 
 [![Made with ROS](https://img.shields.io/badge/Made%20with-ROS-green?&logo=ros)](http://wiki.ros.org/)
 [![Python 3.8](https://img.shields.io/badge/Python-3.8-3776AB?logo=python)](https://www.python.org/downloads/release/python-360/)
@@ -6,24 +6,10 @@
 [![React](https://img.shields.io/badge/REACT-blue?logo=react&logoColor=white)](https://reactjs.org/)
 
 
-![](./main_process.png)
+# Main Process
 
+![](pictures/main_process.png)
 
-# Readme
-
-## Einrichten
-
-Um das Projekt mit dem Submodul fav zu clonen den folgenden Befehl ausführen. Vorher muss ein catkin ws unter ~/fav/catkin_ws/erstellt 
-worden sein.
-
-`git clone --recurse-submodules git@collaborating.tuhh.de:cxh8688/formulasandvehicels.git ~/fav/catkin_ws/src/`
-
-## Wichtige Befehle
-
-`roslaunch controllers depth_control.launch`  Startet den depth controller, rqt multiplot und       die reconfigure gui
-
-` cd ~/fav/catkin_ws/src/logLab1` <br />
- `rosbag record -a -x "(.*)camera(.*)"` Alle rostopics aufzeichnen, und in logLab1 speichern
 # Project structure
 This Project consists of mainly 8 package:
 - **1- fav** : contains the main model , simulation environment ,gazebo plugins, etc.
@@ -35,7 +21,8 @@ This Project consists of mainly 8 package:
 - **7- navigation**: this package represnts the robot controller and is responsible for following the generated path by path_generation pkg.
 - **8- web_ui**: a simple dashboard that add some features to dynamically control the robot beside some other actions and visualizations:
 
-![](./pkg_order.png)
+## Package order
+![](pictures/pkg_order.png)
 
  ## Getting Started
   
@@ -60,7 +47,8 @@ This Project consists of mainly 8 package:
         ~~~bash
         $ source devel/setup.sh
         ~~~
-
+## Gazebo Simulation
+![](pictures/simulation.png)
 
 ## Running diffrent work packages
 
@@ -85,11 +73,6 @@ This Project consists of mainly 8 package:
     ~~~bash
     $ roslaunch finalproject drop_off.launch
     ~~~ 
-
-## Path-Planning Python Simulation ##
-<p align="center">
-<img  src="./assets/BFS.gif" width="600"  />
-</p>
 
 ~~~bash
 $ roscd simulation/scripts
